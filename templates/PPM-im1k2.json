@@ -17,24 +17,24 @@
           "actions": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
-              "value": 2,
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+              "value": null,
               "timeout": null,
-              "settle_time": 5.0
+              "settle_time": null
             }
           ],
           "success_criteria": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "PM",
-                  "description": "PM check",
+                  "description": null,
                   "invert": false,
                   "reduce_period": null,
                   "reduce_method": "average",
@@ -55,7 +55,7 @@
       },
       {
         "SetValueStep": {
-          "name": "im4k4",
+          "name": "im1k2",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -63,9 +63,9 @@
           "actions": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "value": 3,
               "timeout": 8.0,
               "settle_time": 6.0
@@ -74,9 +74,9 @@
           "success_criteria": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "Yag1",
@@ -101,7 +101,7 @@
       },
       {
         "SetValueStep": {
-          "name": "im4k4",
+          "name": "im1k2",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -109,9 +109,9 @@
           "actions": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "value": 4,
               "timeout": 6.0,
               "settle_time": 7.0
@@ -120,9 +120,9 @@
           "success_criteria": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "YAG2",
@@ -147,7 +147,7 @@
       },
       {
         "SetValueStep": {
-          "name": "im4k4",
+          "name": "im1k2",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -155,9 +155,9 @@
           "actions": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "value": 1,
               "timeout": null,
               "settle_time": null
@@ -166,12 +166,12 @@
           "success_criteria": [
             {
               "name": null,
-              "device": "im4k4",
+              "device": "im1k2",
               "attr": "target.state",
-              "pv": "im4k4:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
-                  "name": "out",
+                  "name": "Out",
                   "description": null,
                   "invert": false,
                   "reduce_period": null,
