@@ -20,7 +20,7 @@
               "device": "im1k2",
               "attr": "target.state",
               "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
-              "value": null,
+              "value": 2,
               "timeout": null,
               "settle_time": null
             }
