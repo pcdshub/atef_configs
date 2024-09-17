@@ -1,0 +1,413 @@
+{
+  "version": 0,
+  "root": {
+    "name": "Group Checkout",
+    "description": null,
+    "parent": null,
+    "verify_required": true,
+    "step_success_required": true,
+    "steps": [
+      {
+        "TemplateStep": {
+          "name": null,
+          "description": null,
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "filename": "/cds/group/pcds/pyps/apps/atef/config/templates/PPM-im1k2_templated.json",
+          "edits": []
+        }
+      },
+      {
+        "TemplateStep": {
+          "name": null,
+          "description": null,
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "filename": "/cds/group/pcds/pyps/apps/atef/config/templates/PPM-ac_template.json",
+          "edits": [
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "name"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "name"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "description"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "actions"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ValueToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "success_criteria"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ComparisonToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  1
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "name"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  1
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "actions"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ValueToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  1
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "success_criteria"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ComparisonToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  2
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "name"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  2
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "actions"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ValueToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  2
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "success_criteria"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ComparisonToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  3
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "name"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  3
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "actions"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ValueToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            },
+            {
+              "path": [
+                [
+                  "<class 'atef.procedure.ProcedureFile'>",
+                  "root"
+                ],
+                [
+                  "<class 'atef.procedure.ProcedureGroup'>",
+                  "steps"
+                ],
+                [
+                  "__list__",
+                  3
+                ],
+                [
+                  "<class 'atef.procedure.SetValueStep'>",
+                  "success_criteria"
+                ],
+                [
+                  "__list__",
+                  0
+                ],
+                [
+                  "<class 'atef.procedure.ComparisonToTarget'>",
+                  "pv"
+                ]
+              ],
+              "search_regex": "\\[CN\\]",
+              "replace_text": "IM2K2",
+              "case_sensitive": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
