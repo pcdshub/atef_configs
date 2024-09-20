@@ -6,29 +6,6 @@
     "tags": null,
     "configs": [
       {
-        "ToolConfiguration": {
-          "name": "host ping",
-          "description": null,
-          "tags": null,
-          "tool": {
-            "Ping": {
-              "hosts": [
-                "ctl-rix-cam-03"
-              ],
-              "count": 3,
-              "encoding": "utf-8"
-            }
-          },
-          "by_attr": {
-            "max_time": [],
-            "min_time": [],
-            "num_alive": [],
-            "num_unresponsive": []
-          },
-          "shared": []
-        }
-      },
-      {
         "PVConfiguration": {
           "name": "CommonPvs",
           "description": null,
@@ -47,6 +24,22 @@
                   "if_disconnected": 2,
                   "value_dynamic": null,
                   "value": 0.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              },
+              {
+                "Equals": {
+                  "name": "is_capture_image",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 2,
                   "rtol": null,
                   "atol": null
                 }
@@ -70,8 +63,60 @@
                 }
               }
             ],
-            "IM1K2:PPM:CAM:IMAGE1:EnableCallbacks_RBV": [],
-            "IM1K2:PPM:CAM:IMAGE2:EnableCallbacks_RBV": [],
+            "IM1K2:PPM:CAM:CamRepRate_RBV": [
+              {
+                "Equals": {
+                  "name": "is_time_stamps",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 10.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:IMAGE1:EnableCallbacks_RBV": [
+              {
+                "Equals": {
+                  "name": "is_image1_en",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:IMAGE2:EnableCallbacks_RBV": [
+              {
+                "Equals": {
+                  "name": "is_image2_en",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
             "IM1K2:PPM:CAM:PWR_RBV": []
           },
           "shared": []
