@@ -1,7 +1,7 @@
 {
   "version": 0,
   "root": {
-    "name": "PPM-CN",
+    "name": "PPM-IM6K2",
     "description": "PPM template",
     "parent": null,
     "verify_required": true,
@@ -9,8 +9,8 @@
     "steps": [
       {
         "SetValueStep": {
-          "name": "CN to PM",
-          "description": "Move CN from OUT to PM",
+          "name": "IM6K2 to PM",
+          "description": "Move IM6K2 from OUT to PM",
           "parent": null,
           "verify_required": false,
           "step_success_required": true,
@@ -19,7 +19,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:SET",
+              "pv": "IM6K2:PPM:MMS:STATE:SET",
               "value": 2,
               "timeout": null,
               "settle_time": 5.0
@@ -30,7 +30,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "PM",
@@ -55,7 +55,7 @@
       },
       {
         "SetValueStep": {
-          "name": "CN to Yag1",
+          "name": "IM6K2 to Yag1",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -65,7 +65,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:SET",
+              "pv": "IM6K2:PPM:MMS:STATE:SET",
               "value": 3,
               "timeout": 8.0,
               "settle_time": 6.0
@@ -76,7 +76,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "YAG1",
@@ -101,7 +101,7 @@
       },
       {
         "SetValueStep": {
-          "name": "CN to Yag2",
+          "name": "IM6K2 to Yag2",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -111,7 +111,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:SET",
+              "pv": "IM6K2:PPM:MMS:STATE:SET",
               "value": 4,
               "timeout": 6.0,
               "settle_time": 7.0
@@ -122,7 +122,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:GET_RBV",
+              "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "YAG2",
@@ -147,7 +147,7 @@
       },
       {
         "SetValueStep": {
-          "name": "CN to Out",
+          "name": "IM6K2 to Out",
           "description": "Out",
           "parent": null,
           "verify_required": false,
@@ -157,7 +157,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:SET",
+              "pv": "IM6K2:PPM:MMS:STATE:SET",
               "value": 1,
               "timeout": 8.0,
               "settle_time": 6.0
@@ -168,7 +168,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "CN:PPM:MMS:STATE:SET",
+              "pv": "IM6K2:PPM:MMS:STATE:SET",
               "comparison": {
                 "Equals": {
                   "name": "OUT",
