@@ -1,0 +1,150 @@
+{
+  "version": 0,
+  "root": {
+    "name": "TM1K2",
+    "description": null,
+    "parent": null,
+    "verify_required": true,
+    "step_success_required": true,
+    "steps": [
+      {
+        "SetValueStep": {
+          "name": "TM1K2 to Out",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": "tm1k2",
+              "attr": "target.state",
+              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "value": 1,
+              "timeout": 60.0,
+              "settle_time": 60.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": "tm1k2",
+              "attr": "target.state",
+              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "comparison": {
+                "Equals": {
+                  "name": "Out",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "TM1K2 to T1",
+          "description": null,
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": "tm1k2",
+              "attr": "target.state",
+              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "value": null,
+              "timeout": null,
+              "settle_time": null
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": "tm1k2",
+              "attr": "target.state",
+              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "comparison": {
+                "Equals": {
+                  "name": "T1",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET1",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "TM1K2 to T2",
+          "description": null,
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": "T2",
+              "device": "tm1k2",
+              "attr": "target.state",
+              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "value": 3,
+              "timeout": null,
+              "settle_time": null
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T2",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET2",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      }
+    ]
+  }
+}
