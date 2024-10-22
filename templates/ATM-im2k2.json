@@ -1,7 +1,7 @@
 {
   "version": 0,
   "root": {
-    "name": "TM1K2",
+    "name": "TM2K2",
     "description": null,
     "parent": null,
     "verify_required": true,
@@ -9,7 +9,7 @@
     "steps": [
       {
         "SetValueStep": {
-          "name": "TM1K2 to Out",
+          "name": "TM2K2 to Out",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -19,7 +19,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 1,
               "timeout": 60.0,
               "settle_time": 60.0
@@ -30,7 +30,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "Out",
@@ -55,7 +55,7 @@
       },
       {
         "SetValueStep": {
-          "name": "TM1K2 to T1",
+          "name": "TM2K2 to T1",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -65,7 +65,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 2,
               "timeout": null,
               "settle_time": null
@@ -76,7 +76,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "T1",
@@ -101,7 +101,7 @@
       },
       {
         "SetValueStep": {
-          "name": "TM1K2 to T2",
+          "name": "TM2K2 to T2",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -111,7 +111,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 3,
               "timeout": null,
               "settle_time": null
@@ -122,7 +122,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "T2",
@@ -147,7 +147,7 @@
       },
       {
         "SetValueStep": {
-          "name": "TM1K2 to T3",
+          "name": "TM2K2 to T3",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -157,7 +157,7 @@
               "name": "T3",
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 4,
               "timeout": null,
               "settle_time": null
@@ -168,7 +168,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "T3",
@@ -193,7 +193,7 @@
       },
       {
         "SetValueStep": {
-          "name": "TM1K2 to T4",
+          "name": "TM2K2 to T4",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -203,7 +203,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 5,
               "timeout": null,
               "settle_time": null
@@ -214,7 +214,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "T4",
@@ -239,7 +239,7 @@
       },
       {
         "SetValueStep": {
-          "name": "TM1K2 to T5",
+          "name": "TM2K2 to T5",
           "description": null,
           "parent": null,
           "verify_required": false,
@@ -249,7 +249,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:SET",
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
               "value": 6,
               "timeout": null,
               "settle_time": null
@@ -260,7 +260,7 @@
               "name": null,
               "device": null,
               "attr": null,
-              "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
               "comparison": {
                 "Equals": {
                   "name": "T5",
@@ -273,6 +273,52 @@
                   "if_disconnected": 2,
                   "value_dynamic": null,
                   "value": "TARGET5",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "TM2K2 to T6",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "TM2K2:ATM:MMS:STATE:SET",
+              "value": 7,
+              "timeout": 60.0,
+              "settle_time": 60.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T6",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET6",
                   "rtol": null,
                   "atol": null
                 }
