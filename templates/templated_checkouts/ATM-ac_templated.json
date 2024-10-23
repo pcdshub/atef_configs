@@ -4,7 +4,7 @@
     "name": "CN",
     "description": null,
     "parent": null,
-    "verify_required": true,
+    "verify_required": false,
     "step_success_required": true,
     "steps": [
       {
@@ -21,8 +21,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 1,
-              "timeout": 60.0,
-              "settle_time": 60.0
+              "timeout": 90.0,
+              "settle_time": 90.0
             }
           ],
           "success_criteria": [
@@ -67,8 +67,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 2,
-              "timeout": null,
-              "settle_time": null
+              "timeout": 60.0,
+              "settle_time": 60.0
             }
           ],
           "success_criteria": [
@@ -113,8 +113,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 3,
-              "timeout": null,
-              "settle_time": null
+              "timeout": 60.0,
+              "settle_time": 60.0
             }
           ],
           "success_criteria": [
@@ -159,8 +159,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 4,
-              "timeout": null,
-              "settle_time": null
+              "timeout": 60.0,
+              "settle_time": 60.0
             }
           ],
           "success_criteria": [
@@ -205,8 +205,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 5,
-              "timeout": null,
-              "settle_time": null
+              "timeout": 60.0,
+              "settle_time": 60.0
             }
           ],
           "success_criteria": [
@@ -251,8 +251,8 @@
               "attr": null,
               "pv": "CN:ATM:MMS:STATE:SET",
               "value": 6,
-              "timeout": null,
-              "settle_time": null
+              "timeout": 60.0,
+              "settle_time": 60.0
             }
           ],
           "success_criteria": [
