@@ -12,7 +12,7 @@
           "name": "SA-B1",
           "description": null,
           "parent": null,
-          "verify_required": true,
+          "verify_required": false,
           "step_success_required": true,
           "steps": [
             {
@@ -437,7 +437,7 @@
           "name": "SA-B2",
           "description": null,
           "parent": null,
-          "verify_required": true,
+          "verify_required": false,
           "step_success_required": true,
           "steps": [
             {
@@ -862,7 +862,7 @@
           "name": "SA-B3",
           "description": null,
           "parent": null,
-          "verify_required": true,
+          "verify_required": false,
           "step_success_required": true,
           "steps": [
             {
