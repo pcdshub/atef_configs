@@ -1,0 +1,49 @@
+{
+  "version": 0,
+  "root": {
+    "name": "Vitara",
+    "description": null,
+    "tags": null,
+    "configs": [
+      {
+        "PVConfiguration": {
+          "name": null,
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS11:CNT:TI:GetMeasJitter": [],
+            "LAS:FS11:MMN:FQ.RBV": [],
+            "LAS:FS11:VIT:CH1_CALC_PHASE": [],
+            "LAS:FS11:VIT:CH1_DIODE_PWR": [],
+            "LAS:FS11:VIT:CH1_RF_PWR": [
+              {
+                "Equals": {
+                  "name": "CH1_RF_PWR",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 0.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS11:VIT:PHASE_LOCKED": [],
+            "LAS:FS11:VIT:PID_COARSE_MOTOR_TGT": [],
+            "LAS:FS11:VIT:PIEZO_AMP_MON": [],
+            "LAS:FS11:VIT:matlab:04": [],
+            "LAS:FS45:VIT:FREQ_ERR": []
+          },
+          "shared": []
+        }
+      }
+    ],
+    "values": {},
+    "mode": "all"
+  }
+}

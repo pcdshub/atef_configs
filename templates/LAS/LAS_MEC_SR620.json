@@ -23,7 +23,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "50 Ohm",
                   "rtol": null,
                   "atol": null
                 }
@@ -41,7 +41,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "NORMAL",
                   "rtol": null,
                   "atol": null
                 }
@@ -59,7 +59,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "POSITIVE",
                   "rtol": null,
                   "atol": null
                 }
@@ -95,7 +95,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "DC",
                   "rtol": null,
                   "atol": null
                 }
@@ -113,7 +113,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "50 Ohm",
                   "rtol": null,
                   "atol": null
                 }
@@ -131,7 +131,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "NORMAL",
                   "rtol": null,
                   "atol": null
                 }
@@ -185,7 +185,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "DC",
                   "rtol": null,
                   "atol": null
                 }
@@ -203,7 +203,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "50 Ohm",
                   "rtol": null,
                   "atol": null
                 }
@@ -221,7 +221,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "POSITIVE",
                   "rtol": null,
                   "atol": null
                 }
@@ -293,7 +293,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "TIME",
                   "rtol": null,
                   "atol": null
                 }
@@ -311,7 +311,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "A",
                   "rtol": null,
                   "atol": null
                 }
@@ -329,7 +329,7 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": "Std. Dev.",
                   "rtol": null,
                   "atol": null
                 }
