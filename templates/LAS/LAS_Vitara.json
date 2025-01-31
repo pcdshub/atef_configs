@@ -7,15 +7,213 @@
     "configs": [
       {
         "PVConfiguration": {
-          "name": null,
+          "name": "Main PVs",
           "description": null,
           "tags": null,
           "by_pv": {
-            "LAS:FS11:CNT:TI:GetMeasJitter": [],
-            "LAS:FS11:MMN:FQ.RBV": [],
-            "LAS:FS11:VIT:CH1_CALC_PHASE": [],
-            "LAS:FS11:VIT:CH1_DIODE_PWR": [],
-            "LAS:FS11:VIT:CH1_RF_PWR": [
+            "LAS:FS4:VIT:AUTO_MODE_ENABLE": [],
+            "LAS:FS4:VIT:FS_ENABLE_TIME_CTRL": [],
+            "LAS:FS4:VIT:PHASE_LOCKED": [
+              {
+                "Equals": {
+                  "name": "isPhaseLocked",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Locked",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": []
+        }
+      },
+      {
+        "PVConfiguration": {
+          "name": "Frequency Search Settings",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS4:VIT:FREQ_ERR_CORRECTION": [
+              {
+                "Equals": {
+                  "name": "ERR_CORRECTION",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 30816.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_ERR_LAST_N_STD.HIHI": [
+              {
+                "Equals": {
+                  "name": "LAST_N_STD.HIHI",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 500.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_ERR_SMOOTH": [
+              {
+                "Equals": {
+                  "name": "ERR_SMOOTH",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 0.5,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_ERR_TOLERANCE": [
+              {
+                "Equals": {
+                  "name": "ERR_TOLERANCE",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 300.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_RETRY_COUNTER.HIHI": [
+              {
+                "Equals": {
+                  "name": "RETRY_COUNTER.HIHI",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 10.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_SEARCH_VEL": [
+              {
+                "Equals": {
+                  "name": "SEARCH_VEL",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 0.08,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_SP": [
+              {
+                "Equals": {
+                  "name": "SP",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 68000000.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FREQ_TOLERANCE": [
+              {
+                "Equals": {
+                  "name": "TOLERANCE",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 2.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": []
+        }
+      },
+      {
+        "PVConfiguration": {
+          "name": "RF Locking Details",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS4:VIT:CH1_CALC_PHASE_LAST_60_STD.HIHI": [
+              {
+                "Equals": {
+                  "name": "CH1_CALC_PHASE_LAST_60_STD",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 500.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:CH1_DIODE_PWR.LOLO": [
               {
                 "Equals": {
                   "name": "CH1_RF_PWR",
@@ -27,17 +225,129 @@
                   "severity_on_failure": 2,
                   "if_disconnected": 2,
                   "value_dynamic": null,
-                  "value": 0.0,
+                  "value": 1.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              },
+              {
+                "Equals": {
+                  "name": "CH1_DIODE_PWR",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 1.0,
                   "rtol": null,
                   "atol": null
                 }
               }
             ],
-            "LAS:FS11:VIT:PHASE_LOCKED": [],
-            "LAS:FS11:VIT:PID_COARSE_MOTOR_TGT": [],
-            "LAS:FS11:VIT:PIEZO_AMP_MON": [],
-            "LAS:FS11:VIT:matlab:04": [],
-            "LAS:FS45:VIT:FREQ_ERR": []
+            "LAS:FS4:VIT:CH1_RF_PWR.LOLO": [],
+            "LAS:FS4:VIT:FREQ_ERR.HIHI": [
+              {
+                "Equals": {
+                  "name": "FREQ_ERR.HIHI",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 5.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:PIEZO_AMP_MON.HIHI": [
+              {
+                "Equals": {
+                  "name": "PIEZO_AMP_MON.HIHI",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 3.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:PIEZO_AMP_MON.LOLO": [
+              {
+                "Equals": {
+                  "name": "PIEZO_AMP_MON.LOLO",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 1.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": []
+        }
+      },
+      {
+        "PVConfiguration": {
+          "name": "Script IO",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS4:VIT:FS_ENABLE_BUCKET_FIX": [
+              {
+                "Equals": {
+                  "name": "FS_ENABLE_BUCKET_FIX",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FS_OSC_TGT_FREQ": [
+              {
+                "Equals": {
+                  "name": "FS_OSC_TGT_FREQ",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 68000000.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
           },
           "shared": []
         }
