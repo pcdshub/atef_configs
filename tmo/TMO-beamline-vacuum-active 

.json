@@ -1,0 +1,131 @@
+{
+  "version": 0,
+  "root": {
+    "name": "TMO-beamline-vacuum-active ",
+    "description": null,
+    "parent": null,
+    "verify_required": true,
+    "step_success_required": true,
+    "steps": [
+      {
+        "ProcedureGroup": {
+          "name": "tmo-beamline-vacuum-active-before-pump-down",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": null,
+                "description": null,
+                "parent": null,
+                "verify_required": true,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": "VFV 02",
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:02:STATE",
+                    "value": 0,
+                    "timeout": null,
+                    "settle_time": null
+                  },
+                  {
+                    "name": "VFV 03",
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:03:STATE",
+                    "value": 0,
+                    "timeout": null,
+                    "settle_time": null
+                  },
+                  {
+                    "name": "VFV 01",
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:01:STATE",
+                    "value": 0,
+                    "timeout": null,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:02:STATE_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "untitled",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": 0.0,
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  },
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:03:STATE_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "untitled",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": 0.0,
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  },
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TMO:ROUGH1:VFV:03:STATE_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "untitled",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": 0.0,
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
