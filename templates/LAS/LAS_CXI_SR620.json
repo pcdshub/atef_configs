@@ -1,0 +1,382 @@
+{
+  "version": 0,
+  "root": {
+    "name": "SR620",
+    "description": null,
+    "tags": null,
+    "configs": [
+      {
+        "PVConfiguration": {
+          "name": "PV Checks",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS5:CNT:TI:A:GetInputTerm": [
+              {
+                "Equals": {
+                  "name": "AGetInputTerm",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "50 Ohm",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:A:GetTrigMode": [
+              {
+                "Equals": {
+                  "name": "AGetTrigMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "NORMAL",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:A:GetTrigSlope": [
+              {
+                "Equals": {
+                  "name": "AGetTrigSlope",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "POSITIVE",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:A:GetTrigThreshold": [
+              {
+                "Equals": {
+                  "name": "AGetTrigThresh",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": -0.2,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:A:SetInputCoupl": [
+              {
+                "Equals": {
+                  "name": "ASetInputCoupl",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "DC",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:B:GetInputTerm": [
+              {
+                "Equals": {
+                  "name": "BGetInputTerm",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "50 Ohm",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:B:GetTrigMode": [
+              {
+                "Equals": {
+                  "name": "BGetTrigMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "NORMAL",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:B:GetTrigSlope": [
+              {
+                "Equals": {
+                  "name": "BGetTrigSlope",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "NEGATIVE",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:B:GetTrigThreshold": [
+              {
+                "Equals": {
+                  "name": "BGetTrigThreshold",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": -0.2,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:B:SetInputCoupl": [
+              {
+                "Equals": {
+                  "name": "BSetInputCoupl",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "DC",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:EXT:GetInputTerm": [
+              {
+                "Equals": {
+                  "name": "EXTGetInputTerm",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "50 Ohm",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:EXT:GetTrigSlope": [
+              {
+                "Equals": {
+                  "name": "EXTTrigSlope",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "POSITIVE",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:EXT:GetTrigThreshold": [
+              {
+                "Equals": {
+                  "name": "EXTGetTrigThresh",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 1.7,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:GetArmMode": [
+              {
+                "Equals": {
+                  "name": "GetArmMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "ext trig + time",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:GetAutoMeasMode": [
+              {
+                "Equals": {
+                  "name": "GetAutoMeasMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "ON",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:GetInstrumentMode": [
+              {
+                "Equals": {
+                  "name": "GetInstrMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TIME",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:GetMeasSource": [
+              {
+                "Equals": {
+                  "name": "GetMeasSource",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "A",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:GetVarianceType": [
+              {
+                "Equals": {
+                  "name": "GetVarianceType",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Std. Dev.",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:MeasOffset": [
+              {
+                "Equals": {
+                  "name": "Measoffset",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 5e-05,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS5:CNT:TI:SetRefLvlAmp": [
+              {
+                "Equals": {
+                  "name": "SetRefLvlAmp",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TTL",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": []
+        }
+      }
+    ],
+    "values": {},
+    "mode": "all"
+  }
+}

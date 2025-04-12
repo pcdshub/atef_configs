@@ -1,0 +1,288 @@
+{
+  "version": 0,
+  "root": {
+    "name": "RIX Ref Laser",
+    "description": null,
+    "parent": null,
+    "verify_required": true,
+    "step_success_required": true,
+    "steps": [
+      {
+        "SetValueStep": {
+          "name": "al1k2-in",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "AL1K2:L2SI:MMS:STATE:SET",
+              "value": 2,
+              "timeout": 99.0,
+              "settle_time": 99.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "AL1K2:L2SI:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "IN",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "im5k2-yag",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM5K2:PPM:MMS:STATE:SET_RBV",
+              "value": 3,
+              "timeout": 60.0,
+              "settle_time": 60.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM5K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "YAG1",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "im6k2-yag",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM6K2:PPM:MMS:STATE:SET_RBV",
+              "value": 3,
+              "timeout": 99.0,
+              "settle_time": 99.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "YAG1",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "al1k2-out",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "AL1K2:L2SI:MMS:STATE:SET_RBV",
+              "value": null,
+              "timeout": 99.0,
+              "settle_time": 99.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "AL1K2:L2SI:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "im5k2-out",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM5K2:PPM:MMS:STATE:SET_RBV",
+              "value": null,
+              "timeout": 60.0,
+              "settle_time": 60.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM5K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "im6k2-out",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM6K2:PPM:MMS:STATE:SET_RBV",
+              "value": null,
+              "timeout": 99.0,
+              "settle_time": 99.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "untitled",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      }
+    ]
+  }
+}
