@@ -1,301 +1,23 @@
 {
   "version": 0,
   "root": {
-    "name": "TMO-beamline-vacuum-active ",
+    "name": "tmo-beamline-vacuum-active-after-pump-down",
     "description": null,
     "parent": null,
-    "verify_required": false,
+    "verify_required": true,
     "step_success_required": true,
     "steps": [
       {
         "ProcedureGroup": {
-          "name": "tmo-beamline-vacuum-active-before-pump-down",
+          "name": "After Pump Down",
           "description": null,
           "parent": null,
           "verify_required": false,
           "step_success_required": true,
           "steps": [
             {
-              "SetValueStep": {
-                "name": "close VFV valves",
-                "description": null,
-                "parent": null,
-                "verify_required": false,
-                "step_success_required": true,
-                "actions": [
-                  {
-                    "name": "VFV 02",
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:02:STATE",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "VFV 03",
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:03:STATE",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "VFV 01",
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:01:STATE",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  }
-                ],
-                "success_criteria": [
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:02:STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "untitled",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "Close",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:03:STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "untitled",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "Close",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "TMO:ROUGH1:VFV:03:STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "untitled",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "Close",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  }
-                ],
-                "halt_on_fail": true,
-                "require_action_success": true
-              }
-            },
-            {
-              "SetValueStep": {
-                "name": "close 5 beam valves",
-                "description": null,
-                "parent": null,
-                "verify_required": false,
-                "step_success_required": true,
-                "actions": [
-                  {
-                    "name": "MR2K4",
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR2K4:KBO:VWC:01:OPN_SW",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "MR3K4",
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR3K4:KBO:VWC:01:OPN_SW",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "LI3K4",
-                    "device": null,
-                    "attr": null,
-                    "pv": "LI3K4:IP1:VWC:01:OPN_SW",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "PC5K4",
-                    "device": null,
-                    "attr": null,
-                    "pv": "PC5K4:VWC:01:OPN_SW",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  },
-                  {
-                    "name": "MR4K4",
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR4K4:KBO:VWC:01:OPN_SW",
-                    "value": 0,
-                    "timeout": 30.0,
-                    "settle_time": 30.0
-                  }
-                ],
-                "success_criteria": [
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR2K4:KBO:VWC:01:POS_STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "MR2K4",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "CLOSED",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR3K4:KBO:VWC:01:POS_STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "MR3K4",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "CLOSED",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "LI3K4:IP1:VWC:01:POS_STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "LI3K4",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "CLOSED",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "PC5K4:VWC:01:POS_STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "PC5K4",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "CLOSED",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  },
-                  {
-                    "name": null,
-                    "device": null,
-                    "attr": null,
-                    "pv": "MR4K4:KBO:VWC:01:POS_STATE_RBV",
-                    "comparison": {
-                      "Equals": {
-                        "name": "MR4K4",
-                        "description": null,
-                        "invert": false,
-                        "reduce_period": null,
-                        "reduce_method": "average",
-                        "string": null,
-                        "severity_on_failure": 2,
-                        "if_disconnected": 2,
-                        "value_dynamic": null,
-                        "value": "CLOSED",
-                        "rtol": null,
-                        "atol": null
-                      }
-                    }
-                  }
-                ],
-                "halt_on_fail": true,
-                "require_action_success": true
-              }
-            },
-            {
               "ProcedureGroup": {
-                "name": "beamline valves",
+                "name": "rough pumps",
                 "description": null,
                 "parent": null,
                 "verify_required": false,
@@ -303,7 +25,7 @@
                 "steps": [
                   {
                     "SetValueStep": {
-                      "name": "vrc01",
+                      "name": "rough pumps1",
                       "description": null,
                       "parent": null,
                       "verify_required": false,
@@ -314,7 +36,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:01:AT_VAC_SP",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -323,7 +45,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:01:AT_VAC_HYS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -332,7 +54,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:01:AT_VAC_SP_DS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -341,7 +63,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:01:AT_VAC_HYS_DS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         }
@@ -363,7 +85,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -385,7 +107,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -407,7 +129,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -429,7 +151,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -442,7 +164,7 @@
                   },
                   {
                     "SetValueStep": {
-                      "name": "vrc02",
+                      "name": "rough pumps2",
                       "description": null,
                       "parent": null,
                       "verify_required": false,
@@ -453,7 +175,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:02:AT_VAC_SP",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -462,7 +184,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:02:AT_VAC_HYS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -471,7 +193,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:02:AT_VAC_SP_DS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -480,7 +202,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TMO:ROUGH1:VRC:02:AT_VAC_HYS_DS",
-                          "value": 800.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         }
@@ -502,7 +224,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -524,7 +246,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -546,7 +268,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -568,7 +290,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 800.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -584,7 +306,7 @@
             },
             {
               "ProcedureGroup": {
-                "name": "beamline valves",
+                "name": "pumps",
                 "description": null,
                 "parent": null,
                 "verify_required": false,
@@ -592,7 +314,7 @@
                 "steps": [
                   {
                     "SetValueStep": {
-                      "name": null,
+                      "name": "pumps",
                       "description": null,
                       "parent": null,
                       "verify_required": false,
@@ -603,7 +325,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:01:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -612,7 +334,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:01:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -621,7 +343,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:02:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -630,7 +352,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:02:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -639,7 +361,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:03:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -648,7 +370,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:PTM:03:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -657,7 +379,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:PTM:01:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -666,7 +388,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:PTM:01:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -675,7 +397,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "LI3K4:IP1:OUT:PTM:01:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -684,7 +406,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "LI3K4:IP1:OUT:PTM:01:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -693,7 +415,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TM1K4:PTM:01:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -702,7 +424,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "TM1K4:PTM:01:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -711,7 +433,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:PTM:01:BP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -720,7 +442,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:PTM:01:IP_SP",
-                          "value": 5.0,
+                          "value": 0.05,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         }
@@ -742,7 +464,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -764,7 +486,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -786,7 +508,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -808,7 +530,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -830,7 +552,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -852,7 +574,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -874,7 +596,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -896,7 +618,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -918,7 +640,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -940,7 +662,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -962,7 +684,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -984,7 +706,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -1006,7 +728,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -1028,7 +750,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 5.0,
+                              "value": 0.05,
                               "rtol": null,
                               "atol": null
                             }
@@ -1052,7 +774,7 @@
                 "steps": [
                   {
                     "SetValueStep": {
-                      "name": null,
+                      "name": "guages",
                       "description": null,
                       "parent": null,
                       "verify_required": false,
@@ -1063,7 +785,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1072,7 +794,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1081,7 +803,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1090,7 +812,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1099,7 +821,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1108,7 +830,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1117,7 +839,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA2K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1126,7 +848,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA2K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         }
@@ -1148,7 +870,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1170,7 +892,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1192,7 +914,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1214,7 +936,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1236,7 +958,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1258,7 +980,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1280,7 +1002,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1302,7 +1024,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }

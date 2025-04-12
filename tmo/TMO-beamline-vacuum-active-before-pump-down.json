@@ -9,7 +9,7 @@
     "steps": [
       {
         "ProcedureGroup": {
-          "name": "tmo-beamline-vacuum-active-before-pump-down",
+          "name": "Before Pump Down",
           "description": null,
           "parent": null,
           "verify_required": false,
