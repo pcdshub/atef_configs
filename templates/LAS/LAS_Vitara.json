@@ -11,8 +11,42 @@
           "description": null,
           "tags": null,
           "by_pv": {
-            "LAS:FS4:VIT:AUTO_MODE_ENABLE": [],
-            "LAS:FS4:VIT:FS_ENABLE_TIME_CTRL": [],
+            "LAS:FS4:VIT:AUTO_MODE_ENABLE": [
+              {
+                "Equals": {
+                  "name": "autoEnableMode",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Automatic",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:FS_ENABLE_TIME_CTRL": [
+              {
+                "Equals": {
+                  "name": "isEnableTimeCTRL",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
             "LAS:FS4:VIT:PHASE_LOCKED": [
               {
                 "Equals": {
@@ -26,6 +60,24 @@
                   "if_disconnected": 2,
                   "value_dynamic": null,
                   "value": "Locked",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "LAS:FS4:VIT:RF_LOCK_ENABLE": [
+              {
+                "Equals": {
+                  "name": "rfLockEnable",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
                   "rtol": null,
                   "atol": null
                 }
@@ -343,6 +395,34 @@
                   "if_disconnected": 2,
                   "value_dynamic": null,
                   "value": 68000000.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": []
+        }
+      },
+      {
+        "PVConfiguration": {
+          "name": "Coarse Motor PID Settings",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "LAS:FS4:VIT:PID_COARSE.KP": [
+              {
+                "Equals": {
+                  "name": "PID",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": -0.001,
                   "rtol": null,
                   "atol": null
                 }
