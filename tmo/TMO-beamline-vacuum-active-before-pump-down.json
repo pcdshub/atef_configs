@@ -723,6 +723,24 @@
                           "value": 5.0,
                           "timeout": 30.0,
                           "settle_time": 30.0
+                        },
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "LI1K4:IP1:PTM:01:IP_SP",
+                          "value": null,
+                          "timeout": null,
+                          "settle_time": null
+                        },
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "LI1K4:IP1:PTM:01:BP_SP",
+                          "value": null,
+                          "timeout": null,
+                          "settle_time": null
                         }
                       ],
                       "success_criteria": [
@@ -1033,6 +1051,50 @@
                               "atol": null
                             }
                           }
+                        },
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "LI1K4:IP1:PTM:01:IP_SP_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "untitled",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 5.0,
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        },
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "LI1K4:IP1:PTM:01:BP_SP_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "untitled",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 5.0,
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
                         }
                       ],
                       "halt_on_fail": true,
@@ -1063,7 +1125,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1072,7 +1134,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA1K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1081,7 +1143,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1090,7 +1152,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM4K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1099,7 +1161,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1108,7 +1170,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "IM5K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1117,7 +1179,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA2K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         },
@@ -1126,7 +1188,7 @@
                           "device": null,
                           "attr": null,
                           "pv": "PA2K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.1,
+                          "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
                         }
@@ -1148,7 +1210,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1170,7 +1232,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1192,7 +1254,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1214,7 +1276,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1236,7 +1298,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1258,7 +1320,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1280,7 +1342,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }
@@ -1302,7 +1364,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.1,
+                              "value": 0.01,
                               "rtol": null,
                               "atol": null
                             }

@@ -396,55 +396,19 @@
                           "name": null,
                           "device": null,
                           "attr": null,
-                          "pv": "LI3K4:IP1:OUT:PTM:01:BP_SP",
+                          "pv": "LI1K4:IP1:PTM:01:IP_SP",
                           "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
+                          "timeout": null,
+                          "settle_time": null
                         },
                         {
                           "name": null,
                           "device": null,
                           "attr": null,
-                          "pv": "LI3K4:IP1:OUT:PTM:01:IP_SP",
-                          "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "TM1K4:PTM:01:BP_SP",
-                          "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "TM1K4:PTM:01:IP_SP",
-                          "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:PTM:01:BP_SP",
-                          "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:PTM:01:IP_SP",
-                          "value": 0.05,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
+                          "pv": "LI1K4:IP1:PTM:01:BP_SP",
+                          "value": null,
+                          "timeout": null,
+                          "settle_time": null
                         }
                       ],
                       "success_criteria": [
@@ -628,7 +592,7 @@
                           "name": null,
                           "device": null,
                           "attr": null,
-                          "pv": "LI3K4:IP1:OUT:PTM:01:BP_SP_RBV",
+                          "pv": "LI1K4:IP1:PTM:01:IP_SP_RBV",
                           "comparison": {
                             "Equals": {
                               "name": "untitled",
@@ -650,95 +614,7 @@
                           "name": null,
                           "device": null,
                           "attr": null,
-                          "pv": "LI3K4:IP1:OUT:PTM:01:IP_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.05,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "TM1K4:PTM:01:BP_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.05,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "TM1K4:PTM:01:IP_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.05,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:PTM:01:BP_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.05,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:PTM:01:IP_SP_RBV",
+                          "pv": "LI1K4:IP1:PTM:01:BP_SP_RBV",
                           "comparison": {
                             "Equals": {
                               "name": "untitled",
@@ -815,42 +691,6 @@
                           "value": 0.01,
                           "timeout": 30.0,
                           "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.01,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.01,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.01,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.01,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
                         }
                       ],
                       "success_criteria": [
@@ -870,7 +710,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.01,
+                              "value": 0.001,
                               "rtol": null,
                               "atol": null
                             }
@@ -892,7 +732,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.01,
+                              "value": 0.001,
                               "rtol": null,
                               "atol": null
                             }
@@ -914,7 +754,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.01,
+                              "value": 0.001,
                               "rtol": null,
                               "atol": null
                             }
@@ -936,95 +776,7 @@
                               "severity_on_failure": 2,
                               "if_disconnected": 2,
                               "value_dynamic": null,
-                              "value": 0.01,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:PRO_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.01,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:SP_HYS_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.01,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:PRO_SP_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.01,
-                              "rtol": null,
-                              "atol": null
-                            }
-                          }
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:SP_HYS_RBV",
-                          "comparison": {
-                            "Equals": {
-                              "name": "untitled",
-                              "description": null,
-                              "invert": false,
-                              "reduce_period": null,
-                              "reduce_method": "average",
-                              "string": null,
-                              "severity_on_failure": 2,
-                              "if_disconnected": 2,
-                              "value_dynamic": null,
-                              "value": 0.01,
+                              "value": 0.001,
                               "rtol": null,
                               "atol": null
                             }

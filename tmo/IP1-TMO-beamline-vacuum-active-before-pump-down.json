@@ -876,42 +876,6 @@
                           "value": 0.1,
                           "timeout": 30.0,
                           "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:PRO_SP",
-                          "value": 0.1,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "IM5K4:PPM:GCC:01:SP_HYS",
-                          "value": 0.1,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:PRO_SP",
-                          "value": 0.1,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
-                        },
-                        {
-                          "name": null,
-                          "device": null,
-                          "attr": null,
-                          "pv": "PA2K4:IP1:GCC:01:SP_HYS",
-                          "value": 0.1,
-                          "timeout": 30.0,
-                          "settle_time": 30.0
                         }
                       ],
                       "success_criteria": [
