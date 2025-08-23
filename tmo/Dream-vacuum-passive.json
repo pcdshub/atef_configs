@@ -1,0 +1,811 @@
+{
+  "version": 0,
+  "root": {
+    "name": null,
+    "description": null,
+    "tags": null,
+    "configs": [
+      {
+        "ConfigurationGroup": {
+          "name": "Dream Turbo",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": "Top Priority",
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "PVConfiguration": {
+                      "name": "Top",
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:DP1:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "1st Stage",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:DP2:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "2nd Stage",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:DP3:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "3rd Stage",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:MC:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "MC 1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:MC:PTM:02:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "MC 2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  },
+                  {
+                    "PVConfiguration": {
+                      "name": "Catcher",
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:CAT1:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "CAT 1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:CAT2:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "CAT 2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  },
+                  {
+                    "PVConfiguration": {
+                      "name": "Nozzle",
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:NC:PTM:01:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "NC 1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:NC:PTM:02:AT_SPD_RBV": [
+                          {
+                            "Equals": {
+                              "name": "NC 2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "AT SPEED",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      },
+      {
+        "ConfigurationGroup": {
+          "name": "Hot Cathode",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": "Top",
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "ConfigurationGroup": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "configs": [
+                        {
+                          "PVConfiguration": {
+                            "name": null,
+                            "description": null,
+                            "tags": null,
+                            "by_pv": {
+                              "DREAM:DP1:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "DP1",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ],
+                              "DREAM:DP2:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "DP2",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ],
+                              "DREAM:DP3:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "DP3",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ],
+                              "DREAM:MC:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "MC1",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ],
+                              "DREAM:MC:GHC:02:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "MC2",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ]
+                            },
+                            "shared": []
+                          }
+                        }
+                      ],
+                      "values": {},
+                      "mode": "all"
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            },
+            {
+              "ConfigurationGroup": {
+                "name": "Catcher",
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "ConfigurationGroup": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "configs": [
+                        {
+                          "PVConfiguration": {
+                            "name": null,
+                            "description": null,
+                            "tags": null,
+                            "by_pv": {
+                              "DREAM:CAT1:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "CAT1",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ],
+                              "DREAM:CAT2:GHC:01:PRESS_RBV": [
+                                {
+                                  "Less": {
+                                    "name": "CAT2",
+                                    "description": null,
+                                    "invert": false,
+                                    "reduce_period": null,
+                                    "reduce_method": "average",
+                                    "string": null,
+                                    "severity_on_failure": 2,
+                                    "if_disconnected": 2,
+                                    "value_dynamic": null,
+                                    "value": 9e-11
+                                  }
+                                }
+                              ]
+                            },
+                            "shared": []
+                          }
+                        }
+                      ],
+                      "values": {},
+                      "mode": "all"
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      },
+      {
+        "ConfigurationGroup": {
+          "name": "Cold Cathode",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": null,
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "PVConfiguration": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:NC:GCC:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "NC",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 9e-08
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      },
+      {
+        "ConfigurationGroup": {
+          "name": "Pirani Guage",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": null,
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "PVConfiguration": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:MC:GPI:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "MC",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:DP1:DPI:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "DP1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:NC:GPI:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "NC",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH1:GPI:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "R1_1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH1:GPI:02:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "R1_2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:GPI:01:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "R2_1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:GPI:02:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "R2_2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:GPI:03:PRESS_RBV": [
+                          {
+                            "Less": {
+                              "name": "R2_3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0001
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      },
+      {
+        "ConfigurationGroup": {
+          "name": "Valves",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": null,
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "PVConfiguration": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:CAT1:VRC:01:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "CAT1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "CLOSE",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:DP1:VRC:01:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "DP1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "CLOSE",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH1:VRC:01:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "ROUGH1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "CLOSE",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:VRC:01:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "ROUGH2_1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "CLOSE",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:VRC:02:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "ROUGH2_2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "CLOSE",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      },
+      {
+        "ConfigurationGroup": {
+          "name": "Venting Valve",
+          "description": null,
+          "tags": null,
+          "configs": [
+            {
+              "ConfigurationGroup": {
+                "name": null,
+                "description": null,
+                "tags": null,
+                "configs": [
+                  {
+                    "PVConfiguration": {
+                      "name": null,
+                      "description": null,
+                      "tags": null,
+                      "by_pv": {
+                        "DREAM:ROUGH1:VFV:01:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "ROUGH1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0,
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ],
+                        "DREAM:ROUGH2:VFV:02:OPN_SW": [
+                          {
+                            "Equals": {
+                              "name": "ROUGH1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": 0.0,
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        ]
+                      },
+                      "shared": []
+                    }
+                  }
+                ],
+                "values": {},
+                "mode": "all"
+              }
+            }
+          ],
+          "values": {},
+          "mode": "all"
+        }
+      }
+    ],
+    "values": {},
+    "mode": "all"
+  }
+}
