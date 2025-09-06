@@ -2,7 +2,7 @@
   "version": 0,
   "root": {
     "name": "Dream Beamline Passive ",
-    "description": null,
+    "description": "Full Beamline Passive Checkout",
     "tags": null,
     "configs": [
       {

@@ -2,7 +2,7 @@
   "version": 0,
   "root": {
     "name": "TM1K2",
-    "description": null,
+    "description": "Arrival Time Monitor with 7 states",
     "parent": null,
     "verify_required": false,
     "step_success_required": true,
@@ -10,7 +10,7 @@
       {
         "SetValueStep": {
           "name": "TM1K2 to Out",
-          "description": null,
+          "description": "Move target to Out position.",
           "parent": null,
           "verify_required": false,
           "step_success_required": true,
