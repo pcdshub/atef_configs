@@ -1,0 +1,288 @@
+{
+  "version": 0,
+  "root": {
+    "name": "WFS - CN",
+    "description": null,
+    "parent": null,
+    "verify_required": false,
+    "step_success_required": true,
+    "steps": [
+      {
+        "SetValueStep": {
+          "name": "CN to Out",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": "WFS to Out",
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 1,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "Out",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "CN to T1",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 2,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T1",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET1",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "CN to T2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 3,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T2",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET2",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "CN to T3",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 4,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T3",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET3",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "CN to T4",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 5,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T4",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET4",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "CN to T5",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:SET",
+              "value": 6,
+              "timeout": 99.99,
+              "settle_time": 99.99
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "CN:WFS:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "T5",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "TARGET5",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "version": 0,
+  "root": {
+    "name": "PPM-pc-triggered-cam",
+    "description": null,
+    "tags": null,
+    "configs": [
+      {
+        "ToolConfiguration": {
+          "name": "host ping",
+          "description": null,
+          "tags": null,
+          "tool": {
+            "Ping": {
+              "hosts": [
+                "ctl-rix-cam-03"
+              ],
+              "count": 3,
+              "encoding": "utf-8"
+            }
+          },
+          "by_attr": {
+            "max_time": [],
+            "min_time": [],
+            "num_alive": [],
+            "num_unresponsive": []
+          },
+          "shared": []
+        }
+      },
+      {
+        "PVConfiguration": {
+          "name": "CommonPvs",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "IM6K4:PPM:CAM:ArrayRate_RBV": [
+              {
+                "GreaterOrEqual": {
+                  "name": "ArrayRate",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 1.0
+                }
+              }
+            ],
+            "IM6K4:PPM:CAM:PWR_RBV": [
+              {
+                "Equals": {
+                  "name": "CamPwr",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "ON",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ]
+          },
+          "shared": [
+            {
+              "Equals": {
+                "name": "untitled",
+                "description": null,
+                "invert": false,
+                "reduce_period": null,
+                "reduce_method": "average",
+                "string": null,
+                "severity_on_failure": 2,
+                "if_disconnected": 2,
+                "value_dynamic": null,
+                "value": 0.0,
+                "rtol": null,
+                "atol": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "values": {},
+    "mode": "all"
+  }
+}

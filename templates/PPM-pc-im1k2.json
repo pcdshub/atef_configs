@@ -1,0 +1,129 @@
+{
+  "version": 0,
+  "root": {
+    "name": "PPM-pc-triggered-cam",
+    "description": null,
+    "tags": null,
+    "configs": [
+      {
+        "PVConfiguration": {
+          "name": "CommonPvs",
+          "description": null,
+          "tags": null,
+          "by_pv": {
+            "IM1K2:PPM:CAM:ArrayRate_RBV": [
+              {
+                "Equals": {
+                  "name": "is_acquiring",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 0.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              },
+              {
+                "Equals": {
+                  "name": "is_capture_image",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 2,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:AsynIO.CNCT": [
+              {
+                "Equals": {
+                  "name": "is_connected",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Connect",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:CamRepRate_RBV": [
+              {
+                "Equals": {
+                  "name": "is_time_stamps",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": 10.0,
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:IMAGE1:EnableCallbacks_RBV": [
+              {
+                "Equals": {
+                  "name": "is_image1_en",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:IMAGE2:EnableCallbacks_RBV": [
+              {
+                "Equals": {
+                  "name": "is_image2_en",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "Enabled",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            ],
+            "IM1K2:PPM:CAM:PWR_RBV": []
+          },
+          "shared": []
+        }
+      }
+    ],
+    "values": {},
+    "mode": "all"
+  }
+}

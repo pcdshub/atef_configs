@@ -1,0 +1,196 @@
+{
+  "version": 0,
+  "root": {
+    "name": "PPM-IM3K2",
+    "description": "PPM template",
+    "parent": null,
+    "verify_required": true,
+    "step_success_required": true,
+    "steps": [
+      {
+        "SetValueStep": {
+          "name": "IM3K2 to PM",
+          "description": "Move IM3K2 from OUT to PM",
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:SET",
+              "value": 2,
+              "timeout": null,
+              "settle_time": 5.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "PM",
+                  "description": "PM check",
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "POWERMETER",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "IM3K2 to Yag1",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:SET",
+              "value": 3,
+              "timeout": 8.0,
+              "settle_time": 6.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "YAG1",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "YAG1",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "IM3K2 to Yag2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:SET",
+              "value": 4,
+              "timeout": 6.0,
+              "settle_time": 7.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+              "comparison": {
+                "Equals": {
+                  "name": "YAG2",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "YAG2",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      },
+      {
+        "SetValueStep": {
+          "name": "IM3K2 to Out",
+          "description": "Out",
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "actions": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:SET",
+              "value": 1,
+              "timeout": 8.0,
+              "settle_time": 6.0
+            }
+          ],
+          "success_criteria": [
+            {
+              "name": null,
+              "device": null,
+              "attr": null,
+              "pv": "IM3K2:PPM:MMS:STATE:SET",
+              "comparison": {
+                "Equals": {
+                  "name": "OUT",
+                  "description": null,
+                  "invert": false,
+                  "reduce_period": null,
+                  "reduce_method": "average",
+                  "string": null,
+                  "severity_on_failure": 2,
+                  "if_disconnected": 2,
+                  "value_dynamic": null,
+                  "value": "OUT",
+                  "rtol": null,
+                  "atol": null
+                }
+              }
+            }
+          ],
+          "halt_on_fail": true,
+          "require_action_success": true
+        }
+      }
+    ]
+  }
+}
