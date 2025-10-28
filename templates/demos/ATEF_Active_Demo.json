@@ -1,0 +1,124 @@
+{
+  "version": 0,
+  "root": {
+    "name": "ATEF Motor Demo",
+    "description": null,
+    "parent": null,
+    "verify_required": false,
+    "step_success_required": true,
+    "steps": [
+      {
+        "ProcedureGroup": {
+          "name": null,
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "DescriptionStep": {
+                "name": null,
+                "description": "ATEF Demo",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "move 3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "XPP:USR:PRT:MMS:20.VAL",
+                    "value": 3.0,
+                    "timeout": 30.0,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "XPP:USR:PRT:MMS:20.RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "untitled",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": 3.0,
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "move 2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "XPP:USR:PRT:MMS:20.VAL",
+                    "value": 2.0,
+                    "timeout": 10.0,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "XPP:USR:PRT:MMS:20.RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "untitled",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": 2.0,
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
