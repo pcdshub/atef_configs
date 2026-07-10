@@ -1,0 +1,5143 @@
+{
+  "version": 0,
+  "root": {
+    "name": "Top",
+    "description": null,
+    "parent": null,
+    "verify_required": false,
+    "step_success_required": true,
+    "steps": [
+      {
+        "ProcedureGroup": {
+          "name": "PPM-im1k2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "im1k2",
+                "description": "Move im1k2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "im1k2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Yag1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "im1k2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "im1k2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "value": 1,
+                    "timeout": null,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": "im1k2",
+                    "attr": "target.state",
+                    "pv": "IM1K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "PPM-IM2K2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "IM2K2 to PM",
+                "description": "Move IM2K2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": 5.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": "PM check",
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM2K2 to Yag1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Yag1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM2K2 to Yag2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM2K2 to Out",
+                "description": "Out",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": null,
+                    "settle_time": null
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM2K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "PPM-IM3K2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "IM3K2 to PM",
+                "description": "Move IM3K2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": 5.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": "PM check",
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM3K2 to Yag1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM3K2 to Yag2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM3K2 to Out",
+                "description": "Out",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM3K2:PPM:MMS:STATE:SET",
+                    "comparison": {
+                      "Equals": {
+                        "name": "OUT",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "PPM-IM4K2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "IM4K2 to PM",
+                "description": "Move IM4K2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": 5.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": "PM check",
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM4K2 to Yag1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM4K2 to Yag2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM4K2 to Out",
+                "description": "Out",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM4K2:PPM:MMS:STATE:SET",
+                    "comparison": {
+                      "Equals": {
+                        "name": "OUT",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "TM1K2",
+          "description": "Arrival Time Monitor with 7 states",
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to Out",
+                "description": "Move target to Out position.",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": "T3",
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T3",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET3",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T4",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 5,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T4",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET4",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T5",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 6,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T5",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET5",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to T6",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 7,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T6",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET6",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM1K2 to Out",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 90.0,
+                    "settle_time": 90.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM1K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Back Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "SA - AT1K2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "ProcedureGroup": {
+                "name": "SA-B1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 2,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 6,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:SET",
+                          "value": 9,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ProcedureGroup": {
+                "name": "SA-B2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 2,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 6,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "value": 9,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ProcedureGroup": {
+                "name": "SA-B3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:03:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to In",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:03:STATE:SET",
+                          "value": 2,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT1K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "In",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "IN",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "WFS - PF1K2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to Out",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": "WFS to Out",
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to T1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to T2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to T3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T3",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET3",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to T4",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 5,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T4",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET4",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF1K2 to T5",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:SET",
+                    "value": 6,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF1K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T5",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET5",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "PPM-IM5K2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "IM5K2 to PM",
+                "description": "Move IM5K2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": 5.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": "PM check",
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM5K2 to Yag1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM5K2 to Yag2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM5K2 to Out",
+                "description": "Out",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM5K2:PPM:MMS:STATE:SET",
+                    "comparison": {
+                      "Equals": {
+                        "name": "OUT",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "TM2K2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to Out",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 90.0,
+                    "settle_time": 90.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": "T3",
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T3",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET3",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T4",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 5,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T4",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET4",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T5",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 6,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T5",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET5",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "TM2K2 to T6",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:SET",
+                    "value": 7,
+                    "timeout": 60.0,
+                    "settle_time": 60.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "TM2K2:ATM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T6",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET6",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "SA - AT2K2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "ProcedureGroup": {
+                "name": "SA-B1",
+                "description": null,
+                "parent": null,
+                "verify_required": true,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 2,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 6,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:SET",
+                          "value": 9,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:01:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ProcedureGroup": {
+                "name": "SA-B2",
+                "description": null,
+                "parent": null,
+                "verify_required": true,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 2,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 6,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "value": 9,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:02:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ProcedureGroup": {
+                "name": "SA-B3",
+                "description": null,
+                "parent": null,
+                "verify_required": true,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 1,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 2,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 6,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "value": 9,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:03:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ProcedureGroup": {
+                "name": "SA-B4",
+                "description": null,
+                "parent": null,
+                "verify_required": true,
+                "step_success_required": true,
+                "steps": [
+                  {
+                    "SetValueStep": {
+                      "name": "SA to Out",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 1,
+                          "timeout": null,
+                          "settle_time": null
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "Out",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "OUT",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F1",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 2,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F1",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER1",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F2",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 3,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F2",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER2",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F3",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 4,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F3",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER3",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F4",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 5,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F4",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER4",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F5",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 6,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F5",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER5",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F6",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 7,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F6",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER6",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F7",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 8,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:GET_RBV",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F7",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER7",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  },
+                  {
+                    "SetValueStep": {
+                      "name": "SA to F8",
+                      "description": null,
+                      "parent": null,
+                      "verify_required": false,
+                      "step_success_required": true,
+                      "actions": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "value": 9,
+                          "timeout": 99.99,
+                          "settle_time": 99.99
+                        }
+                      ],
+                      "success_criteria": [
+                        {
+                          "name": null,
+                          "device": null,
+                          "attr": null,
+                          "pv": "AT2K2:L2SI:MMS:04:STATE:SET",
+                          "comparison": {
+                            "Equals": {
+                              "name": "F8",
+                              "description": null,
+                              "invert": false,
+                              "reduce_period": null,
+                              "reduce_method": "average",
+                              "string": null,
+                              "severity_on_failure": 2,
+                              "if_disconnected": 2,
+                              "value_dynamic": null,
+                              "value": "FILTER8",
+                              "rtol": null,
+                              "atol": null
+                            }
+                          }
+                        }
+                      ],
+                      "halt_on_fail": true,
+                      "require_action_success": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "WFS - PF2K2",
+          "description": null,
+          "parent": null,
+          "verify_required": false,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to Out",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": "WFS to Out",
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "Out",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to T1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to T2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to T3",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T3",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET3",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to T4",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 5,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T4",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET4",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "PF2K2 to T5",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:SET",
+                    "value": 6,
+                    "timeout": 99.99,
+                    "settle_time": 99.99
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "PF2K2:WFS:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "T5",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "TARGET5",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ProcedureGroup": {
+          "name": "PPM-IM6K2",
+          "description": "PPM template",
+          "parent": null,
+          "verify_required": true,
+          "step_success_required": true,
+          "steps": [
+            {
+              "SetValueStep": {
+                "name": "IM6K2 to PM",
+                "description": "Move IM6K2 from OUT to PM",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:SET",
+                    "value": 2,
+                    "timeout": null,
+                    "settle_time": 5.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "PM",
+                        "description": "PM check",
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "POWERMETER",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM6K2 to Yag1",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:SET",
+                    "value": 3,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG1",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG1",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM6K2 to Yag2",
+                "description": null,
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:SET",
+                    "value": 4,
+                    "timeout": 6.0,
+                    "settle_time": 7.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:GET_RBV",
+                    "comparison": {
+                      "Equals": {
+                        "name": "YAG2",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "YAG2",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            },
+            {
+              "SetValueStep": {
+                "name": "IM6K2 to Out",
+                "description": "Out",
+                "parent": null,
+                "verify_required": false,
+                "step_success_required": true,
+                "actions": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:SET",
+                    "value": 1,
+                    "timeout": 8.0,
+                    "settle_time": 6.0
+                  }
+                ],
+                "success_criteria": [
+                  {
+                    "name": null,
+                    "device": null,
+                    "attr": null,
+                    "pv": "IM6K2:PPM:MMS:STATE:SET",
+                    "comparison": {
+                      "Equals": {
+                        "name": "OUT",
+                        "description": null,
+                        "invert": false,
+                        "reduce_period": null,
+                        "reduce_method": "average",
+                        "string": null,
+                        "severity_on_failure": 2,
+                        "if_disconnected": 2,
+                        "value_dynamic": null,
+                        "value": "OUT",
+                        "rtol": null,
+                        "atol": null
+                      }
+                    }
+                  }
+                ],
+                "halt_on_fail": true,
+                "require_action_success": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
